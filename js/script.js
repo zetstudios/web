@@ -43,9 +43,9 @@ function setupScrollIndicator() {
 
   if (scrollIndicator) {
     scrollIndicator.addEventListener("click", () => {
-      const studioSection = document.querySelector("#studio");
-      if (studioSection) {
-        studioSection.scrollIntoView({ behavior: "smooth" });
+      const gallerySection = document.querySelector("#gallery");
+      if (gallerySection) {
+        gallerySection.scrollIntoView({ behavior: "smooth" });
       }
     });
   }

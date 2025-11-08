@@ -4,61 +4,67 @@
       "id": "001",
       "title": "La Guerra Grande",
       "poster": "assets/images/poster_la-guerra-grande.jpg",
-      "youtubeId": "",
+      "youtubeId": "4s-kZ8SCzS4",
+      "youtubeTrailerId": "",
       "type": "full",
-      "releaseYear": "",
-      "description": "An epic historical animation from Paraguay."
+      "releaseYear": "2023",
+      "description": "Una épica animación histórica de Paraguay."
     },
     {
       "id": "002",
       "title": "La Pelota Pin Pon",
       "poster": "assets/images/poster_la-pelota-pin-pon.jpg",
-      "youtubeId": "",
+      "youtubeId": "pw8zClWueDM",
+      "youtubeTrailerId": "",
       "type": "full",
-      "releaseYear": "",
-      "description": "A captivating animated story."
+      "releaseYear": "2022",
+      "description": "Una historia animada cautivadora."
     },
     {
       "id": "003",
       "title": "Leyenda Viva",
       "poster": "assets/images/poster_leyenda-viva.jpg",
-      "youtubeId": "",
+      "youtubeId": "hBqKAaa02u0",
+      "youtubeTrailerId": "EMwviD72A4E",
       "type": "full",
-      "releaseYear": "",
-      "description": "Experience the living legend."
+      "releaseYear": "2018",
+      "description": "Sigue un día cotidiano en la vida del Pombero (es una especie de duende o espíritu de la mitología guaraní) , en sus tierras donde era su guardián, pero ahora, olvidado por su gente, ya ni siendo mencionado, tiene que curarse una terrible herida en su pecho, mientras recuerda su vida, y trata de no morir como su leyenda, en lo que sería la última noche del señor de la noche."
     },
     {
       "id": "004",
       "title": "No Están Solos - Capítulo 1",
       "poster": "assets/images/poster_no-estan-solos-cap-1.jpg",
-      "youtubeId": "",
+      "youtubeId": "gCpms_e098E",
+      "youtubeTrailerId": "aTEGo-R4VhA",
       "type": "series",
       "series": "No Están Solos",
       "episode": 1,
-      "releaseYear": "",
-      "description": "The first chapter of an emotional series."
+      "releaseYear": "2024",
+      "description": "El primer capítulo de una serie emotiva."
     },
     {
       "id": "005",
       "title": "No Están Solos - Capítulo 2",
       "poster": "assets/images/poster_no-estan-solos-cap-2.jpg",
-      "youtubeId": "",
+      "youtubeId": "Ut-Qu50bRVc",
+      "youtubeTrailerId": "",
       "type": "series",
       "series": "No Están Solos",
       "episode": 2,
-      "releaseYear": "",
-      "description": "The story continues in chapter 2."
+      "releaseYear": "2024",
+      "description": "La historia continúa en el capítulo 2."
     },
     {
       "id": "006",
       "title": "No Están Solos - Capítulo 3",
       "poster": "assets/images/poster_no-estan-solos-cap-3.jpg",
-      "youtubeId": "",
+      "youtubeId": "Wuq0uZm4Ypo",
+      "youtubeTrailerId": "",
       "type": "series",
       "series": "No Están Solos",
       "episode": 3,
-      "releaseYear": "",
-      "description": "The thrilling conclusion of the series."
+      "releaseYear": "2024",
+      "description": "La emocionante conclusión de la serie."
     }
   ]
 }

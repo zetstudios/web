@@ -34,7 +34,7 @@ class GalleryManager {
   renderGallery() {
     if (this.animations.length === 0) {
       this.galleryGrid.innerHTML =
-        '<div class="loading">No animations found.</div>';
+        '<div class="loading">No se encontraron animaciones.</div>';
       return;
     }
 
@@ -52,7 +52,7 @@ class GalleryManager {
     item.setAttribute("data-id", animation.id);
     item.setAttribute("role", "button");
     item.setAttribute("tabindex", "0");
-    item.setAttribute("aria-label", `View ${animation.title}`);
+    item.setAttribute("aria-label", `Ver ${animation.title}`);
 
     const typeLabel = this.getTypeLabel(animation.type);
 
@@ -87,10 +87,10 @@ class GalleryManager {
 
   getTypeLabel(type) {
     const labels = {
-      full: "Full Movie",
-      trailer: "Trailer",
-      series: "Series",
-      short: "Short Film",
+      full: "Película Completa",
+      trailer: "Tráiler",
+      series: "Serie",
+      short: "Cortometraje",
     };
     return labels[type] || type;
   }
@@ -98,27 +98,32 @@ class GalleryManager {
   openModal(animation) {
     this.modalTitle.textContent = animation.title;
     this.modalDescription.textContent =
-      animation.description || "No description available.";
+      animation.description || "No hay descripción disponible.";
 
     // Clear previous video
     this.videoContainer.innerHTML = "";
 
-    if (animation.youtubeId) {
-      // Create YouTube embed
+    // Use trailer if available, otherwise use main video
+    const embedId = animation.youtubeTrailerId || animation.youtubeId;
+
+    if (embedId) {
+      // Create YouTube embed without autoplay
       const iframe = document.createElement("iframe");
-      iframe.src = `https://www.youtube.com/embed/${animation.youtubeId}?autoplay=1`;
+      iframe.src = `https://www.youtube.com/embed/${embedId}`;
       iframe.allow =
-        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        "accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
       iframe.allowFullscreen = true;
       this.videoContainer.appendChild(iframe);
 
-      // Set YouTube link
-      this.youtubeLink.href = `https://www.youtube.com/watch?v=${animation.youtubeId}`;
+      // Set YouTube link to main video
+      this.youtubeLink.href = `https://www.youtube.com/watch?v=${
+        animation.youtubeId || embedId
+      }`;
       this.youtubeLink.classList.remove("disabled");
     } else {
       // No video available
       this.videoContainer.innerHTML =
-        '<div class="no-video-message">Video coming soon!</div>';
+        '<div class="no-video-message">¡Video próximamente!</div>';
       this.youtubeLink.href = "#";
       this.youtubeLink.classList.add("disabled");
     }
@@ -157,7 +162,7 @@ class GalleryManager {
   showError() {
     this.galleryGrid.innerHTML = `
       <div class="loading">
-        Failed to load gallery. Please try again later.
+        Error al cargar la galería. Por favor, intente más tarde.
       </div>
     `;
   }
